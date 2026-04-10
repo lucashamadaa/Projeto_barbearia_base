@@ -51,13 +51,15 @@ body {
     color: #fff;
     margin-left: 10px;
 }
-.botao{
-    border-radius: 15%;
-    height: 60px;
-    width: 80px;
+.botao_zap{
     margin-left: 10px;
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 750;
-    font-style: normal;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.botao_zap:hover{
+    transform: scale(1.2);
+}
+.botao_zap:active{
+    transform: scale(1.1);
 }
