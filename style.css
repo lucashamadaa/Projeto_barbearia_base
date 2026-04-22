@@ -1,5 +1,5 @@
 .titulo{
-font-family: "Archivo Black", sans-serif;
+font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 110px;
@@ -13,7 +13,7 @@ font-family: "Archivo Black", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    margin-top: 10px;
+    margin-top: 100px;
     margin-left: 7.5px;
     color: #fff;
 }
@@ -27,21 +27,24 @@ font-family: "Archivo Black", sans-serif;
 }
 html, body{
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 body {
     background: #000;
     min-height: max-content;
     margin: 0;
+    background-clip: border-box;
+    background-color: #000;
 }
 .banner {
-    background:#000;
     width: 100%;
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 .texto2{
     font-family: "Dosis", sans-serif;
@@ -62,4 +65,92 @@ body {
 }
 .botao_zap:active{
     transform: scale(1.1);
+}
+body {
+     background-image: 
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url('file:///C:/Users/lucas/Downloads/12019-barbershop-1612726.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: none;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+.precos{
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    font-family:"Dosis", sans-serif;
+}
+.horarios{
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 250px;
+    color: white;
+    width: 200px;
+    font-family:"Dosis", sans-serif;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 10px;
+}
+.container{
+    display: flex;
+    justify-content: flex-end;
+}
+.borda {
+  position: relative;
+  min-height: 100vh;
+}
+.borda::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(#222, #222) top,
+    linear-gradient(#222, #222) bottom,
+    linear-gradient(#222, #222) left,
+    linear-gradient(#222, #222) right;
+  background-size:
+    100% 6px,
+    100% 6px,
+    6px 100%,
+    6px 100%;
+  background-repeat: no-repeat;
+  animation: bordaAnimada 3s linear infinite;
+}
+@keyframes bordaAnimada {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+  100% { filter: brightness(1); }
+}
+.cursor_dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.cursor_circle {
+  width: 35px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+a, button, input, label, textarea {
+  cursor: none !important;
 }
